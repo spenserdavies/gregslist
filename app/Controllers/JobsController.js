@@ -13,7 +13,7 @@ function _toggle(){
   carsElem.classList.add("hidden")
 
   let jobsElem = document.getElementById("allJobs")
-  jobsElem.classList.toggle("hidden")
+  jobsElem.classList.remove("hidden")
 
   let housesElem = document.getElementById("allHouses")
   housesElem.classList.add("hidden")
