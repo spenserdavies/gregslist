@@ -8,6 +8,26 @@ function _draw() {
   document.getElementById("jobs").innerHTML = template;
 }
 
+function _toggle(){
+  let carsElem = document.getElementById("allCars")
+  carsElem.classList.add("hidden")
+
+  let jobsElem = document.getElementById("allJobs")
+  jobsElem.classList.toggle("hidden")
+
+  let housesElem = document.getElementById("allHouses")
+  housesElem.classList.add("hidden")
+
+  let housesButton = document.getElementById("houseButton")
+  housesButton.classList.remove("hidden")
+
+  let jobsButton = document.getElementById("jobButton")
+  jobsButton.classList.add("hidden")
+
+  let carsButton = document.getElementById("carButton")
+  carsButton.classList.remove("hidden")
+}
+
 export default class JobsController{
   constructor() {
     _draw();
@@ -31,5 +51,9 @@ export default class JobsController{
   apply(id){
     _jobsService.apply(id);
     _draw();
+  }
+
+  toggle() {
+    _toggle()
   }
 }
